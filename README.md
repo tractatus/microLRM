@@ -35,9 +35,6 @@
   <a href="https://github.com/tractatus/microLRM">
     <img src="https://github.com/tractatus/microLRM/blob/main/logo.png" alt="Logo" width="300">
   </a>
-
-  <h3 align="center">µLRM</h3>
-
   <p align="center">
      Turn your microscope into a sequencing machine.
     <br />
