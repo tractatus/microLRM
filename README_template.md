@@ -11,6 +11,26 @@
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/bsamseth/cpp-project.svg)](http://isitmaintained.com/project/bsamseth/cpp-project "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/bsamseth/cpp-project.svg)](http://isitmaintained.com/project/bsamseth/cpp-project "Percentage of issues still open")
 
+<br />
+<p align="center">
+  <a href="https://github.com/tractatus/microLRM">
+    <img src="https://github.com/tractatus/microLRM/blob/main/logo.png" alt="Logo" width="300">
+  </a>
+  <p align="center">
+     Turn your microscope into a sequencing machine.
+    <br />
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+  </p>
+</p>
+
+
 # Boiler plate for C++ projects 
 
 This is a boiler plate for C++ projects. What you get:
@@ -21,8 +41,6 @@ This is a boiler plate for C++ projects. What you get:
 -   Continuous testing with [Travis-CI](https://travis-ci.org/), [Appveyor](https://www.appveyor.com) and [GitHub Actions](https://github.com/features/actions), with support for C++17.
 -   Code coverage reports, including automatic upload to [Coveralls.io](https://coveralls.io/) and/or [Codecov.io](https://codecov.io)
 -   Code documentation with [Doxygen](http://www.stack.nl/~dimitri/doxygen/)
-
-![Demo of usage](https://i.imgur.com/foymVfy.gif)
 
 ## Structure
 ``` text
