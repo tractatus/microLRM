@@ -56,11 +56,21 @@
 </details>
 
 
-# What are the aims of µLRM_
+# What are the aims of µLRM?
 
 µLRM or microLRM is an open source alternative to Illumina's [Local Run Manager](https://www.illumina.com/products/by-type/informatics-products/local-run-manager.html). µLRM is a compiled software for real-time microscope and fluidics control that turns any microscope supported by micro-manager's [mmCoreAndDevices](https://github.com/micro-manager/mmCoreAndDevices) into a sequencing machine for _in situ_ sequencing.
 
 With micro Local Run Manager you will be able to: create, monitor, & analyze microscope sequencing runs.  
+
+## Dependencies
+
+## How is µLRM input and output organized?
+
+### Output
+
+Output format closely follows the file folder structure of most contemporary sequencing machines.
+
+### Input
 
 ## Structure of build
 ``` text
