@@ -19,14 +19,14 @@
   <p align="center">
      Turn your microscope into a sequencing machine.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tractatus/microLRM"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/tractatus/microLRM">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/tractatus/microLRM/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/tractatus/microLRM/issues">Request Feature</a>
   </p>
 </p>
 
@@ -58,16 +58,11 @@
 
 # What are the aims of µLRM_
 
-This is a boiler plate for C++ projects. What you get:
+µLRM or microLRM is an open source alternative to Illumina's [Local Run Manager](https://www.illumina.com/products/by-type/informatics-products/local-run-manager.html). µLRM is a compiled software for real-time microscope and fluidics control that turns any microscope supported by micro-manager's [mmCoreAndDevices](https://github.com/micro-manager/mmCoreAndDevices) into a sequencing machine for _in situ_ sequencing.
 
--   Sources, headers and mains separated in distinct folders
--   Use of modern [CMake](https://cmake.org/) for much easier compiling
--   Setup for tests using [doctest](https://github.com/onqtam/doctest)
--   Continuous testing with [Travis-CI](https://travis-ci.org/), [Appveyor](https://www.appveyor.com) and [GitHub Actions](https://github.com/features/actions), with support for C++17.
--   Code coverage reports, including automatic upload to [Coveralls.io](https://coveralls.io/) and/or [Codecov.io](https://codecov.io)
--   Code documentation with [Doxygen](http://www.stack.nl/~dimitri/doxygen/)
+With micro Local Run Manager you will be able to: create, monitor, & analyze microscope sequencing runs.  
 
-## Structure
+## Structure of build
 ``` text
 .
 ├── CMakeLists.txt
@@ -83,7 +78,7 @@ This is a boiler plate for C++ projects. What you get:
     └── main.cpp
 ```
 
-Sources go in [src/](src/), header files in [include/](include/), main programs in [app/](app), and
+Additional sources go in [src/](src/), header files in [include/](include/), main programs in [app/](app), and
 tests go in [tests/](tests/) (compiled to `unit_tests` by default). 
 
 If you add a new executable, say `app/hello.cpp`, you only need to add the following two lines to [CMakeLists.txt](CMakeLists.txt): 
@@ -95,7 +90,6 @@ target_link_libraries(main PRIVATE ${LIBRARY_NAME})  # Link the executable to li
 
 You can find the example source code that builds the `main` executable in [app/main.cpp](app/main.cpp) under the `Build` section in [CMakeLists.txt](CMakeLists.txt). 
 If the executable you made does not use the library in [src/](src), then only the first line is needed.
-
 
 
 ## Building
@@ -113,12 +107,7 @@ Example:
 > make coverage  # Generate a coverage report.
 > make doc       # Generate html documentation.
 ```
-
-## .gitignore
-
-The [.gitignore](.gitignore) file is a copy of the [Github C++.gitignore file](https://github.com/github/gitignore/blob/master/C%2B%2B.gitignore),
-with the addition of ignoring the build directory (`build/`).
-
+<!--
 ## Services
 
 If the repository is activated with Travis-CI, then unit tests will be built and executed on each commit.
@@ -126,4 +115,5 @@ The same is true if the repository is activated with Appveyor.
 
 If the repository is activated with Coveralls/Codecov, then deployment to Travis will also calculate code coverage and
 upload this to Coveralls.io and/or Codecov.io
+-->
 
