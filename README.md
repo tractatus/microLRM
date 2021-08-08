@@ -64,6 +64,14 @@ With micro Local Run Manager you will be able to: create, monitor, & analyze mic
 
 ## Dependencies
 
+* OpenCV
+* [imgui](https://github.com/ocornut/imgui)
+* Eigen
+* Armadillo
+* TensorRT
+* PolyScope
+
+
 ## How is µLRM input and output organized?
 
 ### Output
