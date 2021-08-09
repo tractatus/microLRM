@@ -4,8 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/bsamseth/cpp-project/badge.svg?branch=master)](https://coveralls.io/github/bsamseth/cpp-project?branch=master)
 [![codecov](https://codecov.io/gh/bsamseth/cpp-project/branch/master/graph/badge.svg)](https://codecov.io/gh/bsamseth/cpp-project)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb004322b0d146239a57eb242078e179)](https://www.codacy.com/app/bsamseth/cpp-project?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bsamseth/cpp-project&amp;utm_campaign=Badge_Grade)
-[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/bsamseth/cpp-project.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bsamseth/cpp-project/context:cpp)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/bsamseth/cpp-project.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bsamseth/cpp-project/alerts/)
+[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/tractatus/microLRM.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tractatus/microLRM/context:cpp)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/tractatus/microLRM.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tractatus/microLRM/alerts?mode=list)
 [![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/bsamseth/cpp-project/blob/master/LICENSE)
 [![Lines of Code](https://tokei.rs/b1/github/tractatus/microlrm)](https://github.com/Aaronepower/tokei)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/bsamseth/cpp-project.svg)](http://isitmaintained.com/project/bsamseth/cpp-project "Average time to resolve an issue")
@@ -79,6 +79,8 @@ With micro Local Run Manager you will be able to: create, monitor, & analyze mic
 Output format closely follows the file folder structure of most contemporary sequencing machines.
 
 ### Input
+
+µLRM, unlike traditional fluorescent NGS platforms, is specifically designed to handle 3D data acquired through z-stacks a tiles with confocal quality. That is not to say that 2D data cant be used as input. However the default trained neural networks differ from 3D and 2D scenario. See segmentation and base calling for more details.
 
 ## Structure of build
 ``` text
