@@ -67,7 +67,6 @@ With micro Local Run Manager you will be able to: create, monitor, & analyze mic
 * [OpenCV](https://github.com/opencv/opencv)
 * [imgui](https://github.com/ocornut/imgui)
 * [Eigen](https://eigen.tuxfamily.org/)
-* [Armadillo](http://arma.sourceforge.net/)
 * [TensorRT](https://github.com/NVIDIA/TensorRT)
 * [PolyScope](https://polyscope.run/)
 
