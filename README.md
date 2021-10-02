@@ -119,6 +119,9 @@ Locations of individual amplicons and their point set registration results acros
 The binary base call (BCL) sequence file format is a binary format that can easily be converted to a human readable FASTQ file. 
 µLRM software writes the base and the confidence in the call as a quality score to base call (.bcl) files. This is done in real time, i.e. for every cycle of the sequencing run a call for every location identified on the flow cell is added. BCL files are stored in binary format and represent the raw data output of a sequencing run.
 
+BCL files are compressed with the [gzip (*.gz)](https://www.gnu.org/software/gzip/) or [blocked GNU zip (`*.bgzf`)](https://github.com/lh3/samtools/blob/master/bgzf.h) format.
+Blocked gzip files are larger in size but [improves](https://blastedbio.blogspot.com/2011/11/bgzf-blocked-bigger-better-gzip.html) random access.
+
 #### LOCS file format.
 The `locs` file format stores position data exclusively. `locs` files store position data for successive clusters in 4 byte float pairs, described as follows: bytes 1-4 : (int) Version number (1) bytes 5-8 : 4 byte float equaling 1.0 bytes 9-12 : unsigned int numClusters bytes 13-16: : X coordinate of first cluster (32-bit float) bytes 17-20: : Y coordinate of first cluster (32-bit float) bytes 21-24: : Z coordinate of first cluster (32-bit float). The remaining bytes of the file store the X and Y coordinates of the remaining clusters.
 
