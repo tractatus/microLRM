@@ -125,8 +125,8 @@ Blocked gzip files are larger in size but [improves](https://blastedbio.blogspot
 *Table 1. Byte specification of the BCL format*
 | Bytes                         | Description                                                                                                                                                              | Type   |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| Bytes 0–3                     | Number of N cluster                                                                                                                                                      | uint32 |
-| Bytes 4-(N+3) <br>N-Cluster index | Bits 0–1 are the bases, [A, C, G, T] for [0, 1, 2, 3]. Bits 2–7 are shifted by 2 bits and contain the quality score. All bits with 0 in a byte are reserved for no call. | uint8  |
+| 0–3                     | Number of N cluster                                                                                                                                                      | uint32 |
+| 4-(N+3) <br>N-Cluster index | Bits 0–1 are the bases, [A, C, G, T] for [0, 1, 2, 3]. Bits 2–7 are shifted by 2 bits and contain the quality score. All bits with 0 in a byte are reserved for no call. | uint8  |
 
 #### LOCS file format.
 The `locs` file format stores position data exclusively. `locs` files store position data for successive clusters in 4 byte float pairs, described as follows:
@@ -134,14 +134,14 @@ The `locs` file format stores position data exclusively. `locs` files store posi
 *Table 2. Byte specification of the LOCS format*
 | Bytes 	| Description                   	| Type  	|
 |-------	|-------------------------------	|-------	|
-| 1-4   	| Version number                	| uint8   |
-| 5-8   	| 2.0                           	| double 	|
-| 9-12  	| Number of clusters            	| uint32  |
-| 13-16 	| X coordinate of first cluster 	| double 	|
-| 17-20 	| Y coordinate of first cluster 	| double 	|
-| 21-24 	| Z coordinate of first cluster 	| double 	|
+| 0-3   	| Version number                	| uint8   |
+| 4-7   	| 2.0                           	| double 	|
+| 8-11  	| Number of clusters            	| uint32  |
+| 12-15 	| X coordinate of first cluster 	| double 	|
+| 16-19 	| Y coordinate of first cluster 	| double 	|
+| 20-23 	| Z coordinate of first cluster 	| double 	|
 
-The remaining bytes of the file store the X and Y coordinates of the remaining clusters.
+The remaining bytes of the file store the X, Y and Z coordinates of the remaining clusters.
 
 ### Input
 
