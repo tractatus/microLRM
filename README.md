@@ -60,10 +60,11 @@
 
 µLRM or microLRM is an open source alternative to Illumina's [Local Run Manager](https://www.illumina.com/products/by-type/informatics-products/local-run-manager.html). µLRM is a compiled software for real-time microscope and fluidics control that turns any microscope supported by micro-manager's [mmCoreAndDevices](https://github.com/micro-manager/mmCoreAndDevices) into a sequencing machine for _in situ_ sequencing.
 
-With micro Local Run Manager you will be able to: create, monitor, & analyze microscope sequencing runs.  
+With micro Local Run Manager you will be able to: create, monitor, and analyze microscope sequencing runs.  
 
 ## Dependencies
 
+* [mmCoreAndDevices](https://github.com/micro-manager/mmCoreAndDevices)
 * [OpenCV](https://github.com/opencv/opencv)
 * [imgui](https://github.com/ocornut/imgui)
 * [Eigen](https://eigen.tuxfamily.org/)
@@ -76,6 +77,50 @@ With micro Local Run Manager you will be able to: create, monitor, & analyze mic
 ### Output
 
 Output format closely follows the file folder structure of most contemporary sequencing machines.
+
+Traditionally a "Lane" in Next Generation Sequencing context is the physical lane on a flow cell. 
+
+Lanes might be used to separate different experiments through physical separation of the sequencing reaction. 
+
+Splitting up the analysis based on lanes has traditionally been important for QC purposes in figuring out when fluidics for a given flow cell lane is failing.
+
+However, for _in situ_ sequencing context the lane, or rather the [reaction well](https://gracebio.com/products/hybridization-and-incubation/hybriwell-sealing-system-hybridization-and-incubation/) or [fluidic wall](https://www.pnas.org/content/115/26/E5926.short),  is not the only important level of analysis since realtime sequencing performance is also dependent on the tissue environment of the single sample being sequenced. 
+
+Rather than structuring up into more subfolders a "lane" here is considered to be an individual piece of tissue covered by a set of field of views. Note that with this definition several "lanes" can belong to a single reaction well. To further designate which tissue pieces belong to the same reaction a `📝 LaneGroups.json` file provides information on the groupings of "lanes".
+
+``` text
+.
+├── 📂 Data
+│   ├── 📂 Intensities
+│   │   ├── 📂 BaseCalls
+│   │   │   └── 📂 L001
+│   │   │       └── 📂 C1.1
+│   │   │           └── 📝 s_1_1.bcl
+│   │   └── 📂 L001
+│   │       └── 📝 s_1_1.locs
+│   └── 📂 RTALogs
+├── 📂 InterOp
+│   └── 📂 cache
+├── 📂 Logs
+├── 📂 Recipe
+├── 📝 RunInfo.json
+├── 📝 RunParameters.json
+├── 📝 LaneGroups.json
+├── 📝 SampleSheet.csv
+└── 📂 Thumbnail_images
+    └── 📂 L001
+        └── 📝 s_1_1.html
+```
+At the lowest level base calls for a given cycle, e.g. 📂 C1.1, lane, e.g.  📂 L001, and field of view (FOV) is represented by a single `.bcl` file.
+
+Locations of individual amplicons and their point set registration results across cycles are summarized for a given lane, e.g.  📂 L001, and FOV by a single `.locs` file.
+
+#### BCL file format.
+The binary base call (BCL) sequence file format is a binary format that can easily be converted to a human readable FASTQ file. 
+µLRM software writes the base and the confidence in the call as a quality score to base call (.bcl) files. This is done in real time, i.e. for every cycle of the sequencing run a call for every location identified on the flow cell is added. BCL files are stored in binary format and represent the raw data output of a sequencing run.
+
+#### LOCS file format.
+The `locs` file format stores position data exclusively. `locs` files store position data for successive clusters in 4 byte float pairs, described as follows: bytes 1-4 : (int) Version number (1) bytes 5-8 : 4 byte float equaling 1.0 bytes 9-12 : unsigned int numClusters bytes 13-16: : X coordinate of first cluster (32-bit float) bytes 17-20: : Y coordinate of first cluster (32-bit float) bytes 21-24: : Z coordinate of first cluster (32-bit float). The remaining bytes of the file store the X and Y coordinates of the remaining clusters.
 
 ### Input
 
