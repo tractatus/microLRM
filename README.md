@@ -42,7 +42,7 @@
     <li>
       <a href="#dependencies">Dependencies</a>
     </li>
-    <li><a href="#usage">How is µLRM input and output organized?</a>      </li>
+    <li><a href="#usage">How is µLRM input and output organized?</a>  
       <ol>
       <li><a href="#output">Output</a>
       <li><a href="#bcl">BCL file format</a></li>
