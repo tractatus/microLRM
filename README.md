@@ -48,7 +48,6 @@
       <li><a href="#bcl">BCL file format</a></li>
       <li><a href="#bcl">LOCS file format</a></li>
       </ol>
-
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
