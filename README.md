@@ -43,8 +43,10 @@
       <a href="#dependencies">Dependencies</a>
     </li>
     <li><a href="#usage">How is µLRM input and output organized?</a>
-      <li><a href="#output">Output</a></li>
-      <li><a href="#output">Output</a></li>
+      <li><a href="#output">Output</a>
+      <li><a href="#bcl">BCL file format</a></li>
+      <li><a href="#bcl">LOCS file format</a></li>
+      </li>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -55,7 +57,7 @@
 </details>
 
 
-#About the project
+# About the project
 
 What are the aims of µLRM?
 
@@ -63,7 +65,7 @@ What are the aims of µLRM?
 
 With micro Local Run Manager you will be able to: create, monitor, and analyze microscope sequencing runs.  
 
-##Dependencies
+## Dependencies
 
 * [mmCoreAndDevices](https://github.com/micro-manager/mmCoreAndDevices)
 * [OpenCV](https://github.com/opencv/opencv)
@@ -73,9 +75,9 @@ With micro Local Run Manager you will be able to: create, monitor, and analyze m
 * [PolyScope](https://polyscope.run/)
 
 
-##How is µLRM input and output organized?
+## How is µLRM input and output organized?
 
-###Output
+### Output
 
 Output format closely follows the file folder structure of most contemporary sequencing machines.
 
@@ -116,7 +118,7 @@ At the lowest level base calls for a given cycle, e.g. 📂 C1.1, lane, e.g.  �
 
 Locations of individual amplicons and their point set registration results across cycles are summarized for a given lane, e.g.  📂 L001, and FOV by a single `.locs` file.
 
-####BCL file format
+#### BCL file format
 The binary base call (BCL) sequence file format is a binary format that can easily be converted to a human readable FASTQ file. 
 µLRM software writes the base and the confidence in the call as a quality score to base call (.bcl) files. This is done in real time, i.e. for every cycle of the sequencing run a call for every location identified on the flow cell is added. BCL files are stored in binary format and represent the raw data output of a sequencing run.
 
@@ -129,7 +131,7 @@ Blocked gzip files are larger in size but [improves](https://blastedbio.blogspot
 | 0–3                     | Number of N cluster                                                                                                                                                      | uint32 |
 | 4-(N+3) <br>N-Cluster index | Bits 0–1 are the bases, [A, C, G, T] for [0, 1, 2, 3]. Bits 2–7 are shifted by 2 bits and contain the quality score. All bits with 0 in a byte are reserved for no call. | uint8  |
 
-####LOCS file format
+#### LOCS file format
 The `locs` file format stores position data exclusively. `locs` files store position data for successive clusters in 4 byte float pairs, described as follows:
 
 *Table 2. Byte specification of the LOCS format*
