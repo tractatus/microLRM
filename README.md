@@ -34,6 +34,9 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
+      <a href="https://github.com/tractatus/microLRM/blob/main/CODE_OF_CONDUCT.md">Code of conduct</a>
+    </li>
+    <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
