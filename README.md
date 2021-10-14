@@ -42,11 +42,13 @@
     <li>
       <a href="#dependencies">Dependencies</a>
     </li>
-    <li><a href="#usage">How is µLRM input and output organized?</a>
+    <li><a href="#usage">How is µLRM input and output organized?</a>      </li>
+      <ol>
       <li><a href="#output">Output</a>
       <li><a href="#bcl">BCL file format</a></li>
       <li><a href="#bcl">LOCS file format</a></li>
-      </li>
+      </ol>
+
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
