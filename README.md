@@ -151,6 +151,13 @@ The remaining bytes of the file store the X, Y and Z coordinates of the remainin
 
 µLRM, unlike traditional fluorescent NGS platforms, is specifically designed to handle 3D data acquired through z-stacks a tiles with confocal quality. That is not to say that 2D data cant be used as input. However the default trained neural networks differ from 3D and 2D scenario. See segmentation and base calling for more details.
 
+# Roadmap
+
+Ultimately the goal of µLRM is to function as the acquisition engine within the following plugin landscape:
+
+<img src="https://github.com/tractatus/microLRM/blob/main/acquisition_engine_plugin_landscape.png" alt="INteroperability" width="800">
+
+
 ## Structure of build
 ``` text
 .
