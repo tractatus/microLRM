@@ -50,6 +50,8 @@
       </ol>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#structure-of-build">Structure of build</a></li>
+    <li><a href="#sbuilding">Building</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -64,7 +66,10 @@ What are the aims of µLRM?
 
 µLRM or microLRM is an open source alternative to Illumina's [Local Run Manager](https://www.illumina.com/products/by-type/informatics-products/local-run-manager.html). µLRM is a compiled software for real-time microscope and fluidics control that turns any microscope supported by micro-manager's [mmCoreAndDevices](https://github.com/micro-manager/mmCoreAndDevices) into a sequencing machine for _in situ_ sequencing.
 
-With micro Local Run Manager you will be able to: create, monitor, and analyze microscope sequencing runs.  
+With micro Local Run Manager you will be able to: create, monitor, and analyze microscope sequencing runs. 
+
+µLRM is *not* a tool for tertiary analysis, i.e. making sense of the data in a genomic context. 
+The scope of µLRM is purely focused on the primary and secondary steps of next-generation sequencing analysis.
 
 ## Dependencies
 
@@ -151,12 +156,11 @@ The remaining bytes of the file store the X, Y and Z coordinates of the remainin
 
 µLRM, unlike traditional fluorescent NGS platforms, is specifically designed to handle 3D data acquired through z-stacks a tiles with confocal quality. That is not to say that 2D data cant be used as input. However the default trained neural networks differ from 3D and 2D scenario. See segmentation and base calling for more details.
 
-# Roadmap
+## Roadmap
 
-Ultimately the goal of µLRM is to function as the acquisition engine within the following plugin landscape:
+Ultimately the goal of µLRM is to function as the acquisition engine (red) within the following plugin landscape:
 
 <img src="https://github.com/tractatus/microLRM/blob/main/acquisition_engine_plugin_landscape.png" alt="INteroperability" width="800">
-
 
 ## Structure of build
 ``` text
@@ -203,6 +207,15 @@ Example:
 > make coverage  # Generate a coverage report.
 > make doc       # Generate html documentation.
 ```
+
+## Contributing
+
+## License"
+
+## Contact
+
+## Acknowledgements
+
 <!--
 ## Services
 
