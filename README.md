@@ -210,9 +210,13 @@ Example:
 
 ## Contributing
 
-## License"
+## License
+
+This is free and unencumbered software released into the public domain.
 
 ## Contact
+
+Daniel Fürth, SciLifeLab/Uppsala University. 
 
 ## Acknowledgements
 
