@@ -6,10 +6,10 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb004322b0d146239a57eb242078e179)](https://www.codacy.com/app/bsamseth/cpp-project?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bsamseth/cpp-project&amp;utm_campaign=Badge_Grade)
 [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/tractatus/microLRM.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tractatus/microLRM/context:cpp)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/tractatus/microLRM.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tractatus/microLRM/alerts?mode=list)
-[![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/bsamseth/cpp-project/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/tractatus/microLRM/blob/master/LICENSE)
 [![Lines of Code](https://tokei.rs/b1/github/tractatus/microlrm)](https://github.com/Aaronepower/tokei)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/bsamseth/cpp-project.svg)](http://isitmaintained.com/project/bsamseth/cpp-project "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/bsamseth/cpp-project.svg)](http://isitmaintained.com/project/bsamseth/cpp-project "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/tractatus/microLRM.svg)](https://isitmaintained.com/project/tractatus/microLRM "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/tractatus/microLRM.svg)](https://isitmaintained.com/project/tractatus/microLRM "Percentage of issues still open")
 
 <br />
 <p align="center">
